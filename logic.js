@@ -12,7 +12,7 @@ var paddle1Y = 250;
 var paddle2Y = 250;
 const PADDLE_HEIGHT = 100;
 const PADDLE_THICKNESS = 20;
-const AI_DIFFICULTY = 10;
+const AI_DIFFICULTY = 2;
 
 function calculateMousePos(evt) {
     var rect = canvas.getBoundingClientRect();
@@ -74,6 +74,7 @@ function moveEverything() {
         }
         else {
             ballReset();
+            player2Score ++;
         }
     }
     if(ballX > canvas.width) {
@@ -83,6 +84,7 @@ function moveEverything() {
         }
         else {
             ballReset();
+            player1Score ++;
         }
     }
     if(ballY < 0) {
@@ -108,7 +110,8 @@ function drawEverything() {
 //    ball
     colorCircle(ballX,ballY,10,'white');
 
-    canvasContext.fillText("score ",100,100);
+    canvasContext.fillText("You:" + player1Score,200,100);
+    canvasContext.fillText("computer:" + player2Score,canvas.width - 200,100);
 
 }
 
