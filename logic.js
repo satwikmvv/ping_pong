@@ -7,7 +7,7 @@ var ballSpeedY = 5;
 
 var player1Score = 0;
 var player2Score = 0;
-const WIN_SCORE = 3;
+const WIN_SCORE = 5;
 
 var showWin = false;
 
@@ -15,7 +15,7 @@ var paddle1Y = 250;
 var paddle2Y = 250;
 const PADDLE_HEIGHT = 100;
 const PADDLE_THICKNESS = 10;
-const AI_DIFFICULTY = 7;
+const AI_DIFFICULTY = 10;
 const ACCELERATION = 0;
 
 function calculateMousePos(evt) {
